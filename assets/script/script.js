@@ -14,7 +14,7 @@ var blackjackGame = {
 };
 
 
-// set a save
+screen.orientation.lock('landscape');
 
 
 const you = blackjackGame['you']

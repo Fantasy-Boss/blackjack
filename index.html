@@ -3,90 +3,88 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>BlackJack</title>
+     <title>Blackjack</title>
      <link rel="icon" href="/assets/images/icon.png" type="image/png">
      <link rel="stylesheet" href="assets/style/bootstrap.min.css">
      <link rel="stylesheet" href="assets/style/style.css">
 </head>
 <body style="background-image: url('assets/images/board.png');">
-          <div class="help-me" >
-               <div class="help-me-on">
-                    <div class="close">+</div>
-                    <p id="rule">Blackjack Rules</p>
-                    <ol>
-                         <li>The goal of blackjack is to beat the dealer's hand without going over 21.</li>
-                         <li>Face cards are worth 10. Aces are worth 1 or 11, whichever makes a better hand.</li>
-                         <li>To 'Hit' is to ask for another card. To 'Stand' is to hold your total and end your turn.</li>
-                         <li>If you go over 21 you bust, but if the dealer gets bust too then it's a draw.</li>
-                         <li>After every game "Deal" is to start a new game.</li>
-                    </ol>
-                    <div class="get">
-                         <div class="ads">
-                              
-                         </div>
-                         <div class="get-btn">
-                              <button class="btn-lg btn-success button" id="get">Get 1000 Points</button>
-                         </div>
+     <div class="help-me" >
+          <div class="help-me-on">
+               <div class="close">+</div>
+               <p id="rule">Blackjack Rules</p>
+               <ol>
+                    <li>The goal of blackjack is to beat the dealer's hand without going over 21.</li>
+                    <li>Face cards are worth 10. Aces are worth 1 or 11, whichever makes a better hand.</li>
+                    <li>To 'Hit' is to ask for another card. To 'Stand' is to hold your total and end your turn.</li>
+                    <li>If you go over 21 you bust, but if the dealer gets bust too then it's a draw.</li>
+                    <li>After every game "Deal" is to start a new game.</li>
+               </ol>
+               <div class="get">
+                    <div class="ads">
+                         
+                    </div>
+                    <div class="get-btn">
+                         <button class="btn-lg btn-success button" id="get">Get 1000 Points</button>
                     </div>
                </div>
           </div>
+     </div>
+     <div>
+          <h1 class="flex" id="status">Let's Play</h1>
+     </div>
+     <div>
           <div>
-               <h1 class="flex" id="status">Let's Play</h1>
+               <div class="flex">
+                    <div><h1>You: <span id="you-score">0</span></h1></div>
+                    <div><h1>Dealer: <span id="dealer-score">0</span></h1></div>
+               </div>
           </div>
           <div>
                <div>
                     <div class="flex">
-                         <div><h1>You: <span id="you-score">0</span></h1></div>
-                         <div><h1>Dealer: <span id="dealer-score">0</span></h1></div>
+                         <div class="card-box" id="you-tab">
+                              
+                         </div>
+                         <div id="bar"></div>
+                         <div class="card-box" id="dealer-tab">
+                              
+                         </div>
                     </div>
                </div>
-               <div>
-                    <div>
-                         <div class="flex">
-                              <div class="card-box" id="you-tab">
-                                   
-                              </div>
-                              <div id="bar"></div>
-                              <div class="card-box" id="dealer-tab">
-                                   
-                              </div>
-                         </div>
+          </div><br id="br">
+          <div>
+               <div class="flex" id="active">
+                    <div id="help-div">
+                         <h3 id="help">?</h3>
                     </div>
-               </div><br id="br">
-               <div>
-                    <div class="flex" id="active">
-                         <div id="help-div">
-                              <h3 id="help">?</h3>
-                         </div>
-                         <div class="bet-box">
-                              <div><h4>Bet: <span id="select"><select id="bet">
-                                   <option value="500" id="half" selected="selected">500</option>
-                                   <option value="1000" id="one">1000</option>
-                                   <option value="2000" id="two">2000</option>
-                                   <option value="5000" id="five">5000</option>
-                                   <option value="10000" id="ten">10000</option>
-                              </select></span></h4>
-                              </div>
-                              <div>
-                                   <h4>Total: <span id="total">10000</span></h4>
-                              </div>
+                    <div class="bet-box">
+                         <div><h4>Bet: <span id="select"><select id="bet">
+                              <option value="500" id="half" selected="selected">500</option>
+                              <option value="1000" id="one">1000</option>
+                              <option value="2000" id="two">2000</option>
+                              <option value="5000" id="five">5000</option>
+                              <option value="10000" id="ten">10000</option>
+                         </select></span></h4>
                          </div>
                          <div>
-                              <button class="btn-lg btn-primary" id="hit">Hit</button>
-                              <button class="btn-lg btn-success" id="stand">Stand</button>
-                              <button class="btn-lg btn-danger" id="deal">Deal</button>
+                              <h4>Total: <span id="total">10000</span></h4>
                          </div>
-                         <div  class="inline">
-                              <div>
-                                   <h4> <span class="space">Win: <span id="win">0</span></span><span class="space">
-                                        Lose: <span id="lose">0</span></span> Draw: <span id="draw">0</span></h4>
-                              </div>     
-                         </div>
+                    </div>
+                    <div>
+                         <button class="btn-lg btn-primary" id="hit">Hit</button>
+                         <button class="btn-lg btn-success" id="stand">Stand</button>
+                         <button class="btn-lg btn-danger" id="deal">Deal</button>
+                    </div>
+                    <div  class="inline">
+                         <div>
+                              <h4> <span class="space">Win: <span id="win">0</span></span><span class="space">
+                                   Lose: <span id="lose">0</span></span> Draw: <span id="draw">0</span></h4>
+                         </div>     
                     </div>
                </div>
           </div>
-
-     
+     </div>
 
      <script src="assets/script/script.js" type="text/javascript"></script>
 </body>
