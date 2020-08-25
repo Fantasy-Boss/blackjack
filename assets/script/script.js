@@ -13,9 +13,9 @@ var blackjackGame = {
      'credit' : {'bet' : 500, 'total' : 10000,}
 };
 
-
-screen.orientation.lock('landscape');
-
+window.addEventListener('load', function() {
+     document.querySelector(".float").style.display = 'none'
+})
 
 const you = blackjackGame['you']
 const dealer = blackjackGame['dealer']

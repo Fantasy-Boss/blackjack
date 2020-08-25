@@ -1,11 +1,61 @@
 body {
-     font-family: Roboto, sans-serif;
+     font-family: 'Poppins', sans-serif;
      background-repeat: no-repeat;
      background-size: cover;
      color: white;
      padding: 20px;
+     min-height: 100%;
+}
 
-}  
+html, body { width: 100vw; height: 100vh;}
+
+
+.float {
+     height: 100%;
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.4);
+     position: absolute;
+     top: 0;
+     left: 0;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     transition: display 0.7s;
+     z-index: 5;
+}
+
+.load {
+     background-color: white;
+     border-radius: 25px;
+     height: 200px;
+     width: 200px;
+     box-shadow: 1px 1px 30px gray;
+     display: flex;
+     padding: 50px;
+     justify-content: space-around;
+     position: relative;
+     z-index: 6;
+}
+
+.load div {
+     height: 100px;
+     width: 100px;
+     position: relative ;
+     border: 8px solid;
+     border-radius: 60%;
+     border-left: 8px solid #fc00f9;
+     border-bottom: 8px solid #fc00f9;
+     border-top: 8px solid rgba(0, 0, 0, 0);
+     border-right: 8px solid rgba(0, 0, 0, 0);
+     animation:load 2s linear infinite ;
+     overflow:hidden;
+}
+
+@keyframes load {
+     0%{transform:rotate(0deg);}
+     100%{transform:rotate(360deg);}
+}
+
 
 #active {
      align-items: center;
@@ -112,11 +162,12 @@ body {
 
 
 .help-me {
-     height: 94%;
-     width: 97%;
+     height: 100%;
+     width: 100%;
      background-color: rgba(0, 0, 0, 0.4);
      position: absolute;
-     top: 1;
+     top: 0;
+     left: 0;
      justify-content: space-around;
      align-items: center;
      display: none;
@@ -175,7 +226,41 @@ ol {
      display: none;
 }
 
+svg {
+     position: relative;
+}
 
+.land {
+     position: absolute;
+     height: 100vh;
+     width: 100vw;
+     top: 0;
+     left: 0;
+     background-color: rgba(0, 0, 0, 0.7);
+     display: none;
+     justify-content: space-around;
+     align-items: center;
+}
+
+
+
+@media (orientation: portrait) {
+     .view {
+          display: none;
+     }
+     .land {
+          display: flex;
+     }
+}
+
+@media (orientation: landscape) {
+     .view {
+          display: block;
+     }
+     .land {
+          display: none;
+     }
+}
 
 
 /*        Responsive           */
@@ -394,6 +479,33 @@ ol {
           margin-right: 15px;
      }
 
+     
+     .help-me-on {
+          padding: 30px;
+     }
+
+     .close {
+          font-size: 30px;
+     }
+     
+     ol {
+          color: #000;
+          font-size: 15px;
+     }
+     
+     #rule {
+          font-size: 25px;
+     }
+
+     .get-btn {
+          padding-bottom: 1px;
+     }
+     
+     .ads {
+          height: 10em;
+          margin:0.7em 0;
+     }
+
 }
 
 
@@ -524,6 +636,7 @@ ol {
      body {
           padding-top: 10px;
           padding-bottom: 0px;
+          padding: 0 10px;
      }  
 
      h1 {
@@ -629,6 +742,7 @@ ol {
      body {
           padding-top: 6px;
           padding-bottom: 0px;
+          padding: 0 10px;
      }  
 
      h1 {
@@ -731,7 +845,115 @@ ol {
 
 
 
+@media only screen and (max-width: 390px) {
 
+     body {
+          padding-top: 6px;
+          padding-bottom: 0px;
+          padding: 0 10px;
+     }  
+
+     h1 {
+          font-size: small;
+     }
+
+     h4 {
+          font-size: 7px;
+     }
+
+     .btn-lg {
+          font-size: 9px;
+          padding: 3px;
+          margin-right: 6px;
+     }
+
+     #hit {
+          padding-right: 5px;
+          padding-left: 5px;
+     }
+     
+     #bar {
+          margin: 10px;
+          border: 1px solid white;
+          border-radius: 10px;
+     }
+
+     #br {
+          display: none;
+     }
+
+     .card-box {
+          height: 100px;
+     }
+
+     .card-box img {
+          width: 20%;
+          padding: 5px;
+     }
+     
+     #help {
+          font-size: 10px;
+          padding: 0px 5px;
+          border: 1px solid none;
+          border-radius: 80px;
+     }
+     
+     #help-div {
+          padding: 0px;
+          padding-top: 10px;
+     }
+     
+     .inline {
+          padding: 10px 10px;
+     }
+     
+     .inline div {
+          border-radius: 10px;
+          padding: 5px;
+     }
+     
+     .bet-box {
+          padding: 5px;
+          margin-right: 10px;
+          margin-left: 5px;
+     }
+     
+     .space {
+          margin-right: 8px;
+     }
+
+     .help-me-on {
+          padding: 10px;
+     }
+
+     .close {
+          font-size: 15px;
+          top: 5px;
+          right: 10px;
+     }
+
+     
+     ol {
+          color: #000;
+          font-size: 10px;
+          padding: 0px 10px;
+     }
+
+     li {
+          font-size: smaller;
+     }
+     
+     #rule {
+          font-size: 10px;
+          margin-bottom: 0px;
+     }
+     
+     .ads {
+          height: 5.5em;
+          margin:0.4em 0;
+     }
+
+}
 
 
 
