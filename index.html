@@ -7,13 +7,20 @@
      <link rel="icon" href="/assets/images/icon.png" type="image/png">
      <link rel="stylesheet" href="assets/style/bootstrap.min.css">
      <link rel="stylesheet" href="assets/style/style.css">
+     <link rel="manifest" href="manifest.webmanifest">
+     <meta name=description content="Blackjack is a gambling card game in which 
+     players try to acquire cards with a face value totalling 21 and no more.">
+     <!-- IOS Support -->
+     <link rel="apple-touch-icon" href="/assets/images/icon-96.png"> 
+     <meta name="apple-mobile-web-app-status-bar-style" content="#44fa3e">
+     <meta name="theme-color" content="#44fa3e">
 </head>
-<body oncontextmenu="return false" style="background-image: url('assets/images/board.png');">
+<body oncontextmenu="return true">
      <div class="float"><div class="load"><div></div></div></div>
      <div class="view">
           <div class="help-me" >
                <div class="help-me-on">
-                    <div class="close">+</div>
+                    <div title="Close" class="close">+</div>
                     <p id="rule">Blackjack Rules</p>
                     <ol>
                          <li>The goal of blackjack is to beat the dealer's hand without going over 21.</li>
@@ -23,7 +30,9 @@
                          <li>After every game "Deal" is to start a new game.</li>
                     </ol>
                     <div class="get">
-                         <div class="ads"></div>
+                         <div class="ads">
+                              
+                         </div>
                          <div class="get-btn">
                               <button class="btn-lg btn-success button" id="get">Get 1000 Points</button>
                          </div>
@@ -55,7 +64,7 @@
                </div><br id="br">
                <div>
                     <div class="flex" id="active">
-                         <div id="help-div">
+                         <div title="Help" id="help-div">
                               <h3 id="help">?</h3>
                          </div>
                          <div class="bet-box">

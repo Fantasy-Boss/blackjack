@@ -15,6 +15,7 @@ var blackjackGame = {
 
 window.addEventListener('load', function() {
      document.querySelector(".float").style.display = 'none'
+     registerSW()
 })
 
 const you = blackjackGame['you']
@@ -294,4 +295,12 @@ function save() {
 }
 
 
-
+async function registerSW() {
+     if ('serviceWorker' in navigator) {
+          try {
+               await navigator.serviceWorker.register('/sw.js');
+          } catch (err) {
+          console.log(`SW registration failed`, err);
+          }
+     }
+}
