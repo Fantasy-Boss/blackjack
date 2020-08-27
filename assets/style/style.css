@@ -228,7 +228,7 @@ ol {
 
 #get {
      box-shadow: 1px 1px 30px gray;
-     border-radius: 30px;
+     border-radius: 10px;
      outline: none;
 }
 
@@ -239,6 +239,11 @@ ol {
      text-align: center;
      margin: 2em 0;
      border-radius: 10px;
+}
+
+#ad-img {
+     height: 95%;
+     z-index: 8;
 }
 
 .get {

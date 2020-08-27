@@ -1,6 +1,5 @@
 const cacheName = 'blackjack-v1';
 const staticAssets = [
-    '/blackjack',
     'index.html',
     'manifest.webmanifest',
     'assets/style/bootstrap.min.css',
@@ -29,6 +28,7 @@ const staticAssets = [
     'assets/images/icon-96.png',
     'assets/images/icon-256.png',
     'assets/images/icon-512.png',
+    '/blackjack/'
 ];
 
 self.addEventListener('install', async e => {
