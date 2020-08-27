@@ -3,29 +3,29 @@
     "short_name": "Blackjack",
     "description": "A gambling card game in which players try to acquire cards with a face value totalling 21 and no more.",
     "icons": [{
-            "src": "/assets/images/icon.png",
+            "src": "assets/images/icon.png",
             "sizes": "32x32",
             "type": "image/png"
         },
         {
-            "src": "/assets/images/icon-96.png",
+            "src": "assets/images/icon-96.png",
             "sizes": "96x96",
             "type": "image/png"
         },
         {
-            "src": "/assets/images/icon-256.png",
+            "src": "assets/images/icon-256.png",
             "sizes": "256x256",
             "type": "image/png"
         },
         {
-            "src": "/assets/images/icon-512.png",
+            "src": "assets/images/icon-512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
         }
     ],
-    "start_url": "/index.html",
-    "scope": "/",
+    "start_url": "index.html",
+    "scope": ".",
     "display": "fullscreen",
     "orientation ": "landscape",
     "theme_color": "#44fa3e",
